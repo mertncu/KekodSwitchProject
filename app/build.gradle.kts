@@ -42,6 +42,7 @@ android {
 
 dependencies {
     implementation(libs.glide.v4120)
+    implementation(libs.androidx.navigation.fragment)
     annotationProcessor(libs.compiler.v4132)
     implementation(libs.androidx.cardview)
     implementation(libs.androidx.core.ktx.v1100)
