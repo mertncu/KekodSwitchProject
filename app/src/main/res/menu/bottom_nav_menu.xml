@@ -6,17 +6,17 @@
     <item
         android:id="@+id/disgustItem"
         android:icon="@drawable/ic_disgust"
-        android:title="Switch 2" />
+        android:title="Disgust" />
     <item
         android:id="@+id/joyItem"
         android:icon="@drawable/ic_joy"
-        android:title="Switch 3" />
+        android:title="Joy" />
     <item
         android:id="@+id/fearItem"
         android:icon="@drawable/ic_fear"
-        android:title="Switch 4" />
+        android:title="Fear" />
     <item
         android:id="@+id/sadnessItem"
         android:icon="@drawable/ic_sad"
-        android:title="Switch 5" />
+        android:title="Sadness" />
 </menu>

@@ -26,7 +26,7 @@
                 android:layout_margin="8dp"
                 android:track="@drawable/bg_track"
                 android:thumb="@drawable/ic_thumb"
-                android:text="Kindness"
+                android:text="Anger"
                 android:enabled="false"/>
 
             <Switch
@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
-                android:text="Optimism"
+                android:text="Disgust"
                 android:track="@drawable/bg_track"
                 android:thumb="@drawable/ic_thumb"
                 android:enabled="false"/>
@@ -48,7 +48,7 @@
                 android:layout_margin="8dp"
                 android:track="@drawable/bg_track"
                 android:thumb="@drawable/ic_thumb"
-                android:text="Happiness"
+                android:text="Joy"
                 android:enabled="false"/>
 
             <Switch
@@ -59,7 +59,7 @@
                 android:layout_margin="8dp"
                 android:track="@drawable/bg_track"
                 android:thumb="@drawable/ic_thumb"
-                android:text="Giving"
+                android:text="Fear"
                 android:enabled="false"/>
 
             <Switch
@@ -70,7 +70,7 @@
                 android:layout_margin="8dp"
                 android:track="@drawable/bg_track"
                 android:thumb="@drawable/ic_thumb"
-                android:text="Respect"
+                android:text="Sadness"
                 android:enabled="false"/>
 
             <Switch
