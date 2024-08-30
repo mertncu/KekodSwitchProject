@@ -1,13 +1,15 @@
 package com.example.kekodswitchproject.ui.ego
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
-import android.app.AlertDialog
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.bumptech.glide.Glide
 import com.example.kekodswitchproject.R
 import com.example.kekodswitchproject.databinding.FragmentEgoBinding
 import com.example.kekodswitchproject.ui.anger.AngerFragment
@@ -20,6 +22,8 @@ class EgoFragment : Fragment() {
 
     private var _binding: FragmentEgoBinding? = null
     private val binding get() = _binding!!
+    private val gifDisplayDuration = 9000L
+    private val handler = Handler(Looper.getMainLooper())
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,15 +45,20 @@ class EgoFragment : Fragment() {
         }
 
         val switches = listOf(
-            binding.switch1,
-            binding.switch2,
-            binding.switch3,
-            binding.switch4,
-            binding.switch5
+            binding.switch1 to R.drawable.anger_gif,
+            binding.switch2 to R.drawable.disgust_gif,
+            binding.switch3 to R.drawable.joy_gif,
+            binding.switch4 to R.drawable.fear_gif,
+            binding.switch5 to R.drawable.sadness_gif
         )
 
-        switches.forEach { switch ->
-            switch.setOnCheckedChangeListener { _, _ -> updateSwitchesAndNavigation() }
+        switches.forEach { (switch, gifResId) ->
+            switch.setOnCheckedChangeListener { _, isChecked ->
+                updateSwitchesAndNavigation()
+                if (isChecked) {
+                    showGif(gifResId)
+                }
+            }
         }
     }
 
@@ -58,7 +67,7 @@ class EgoFragment : Fragment() {
         if (isEgoChecked) {
             disableAllOtherSwitches()
         }
-        updateBottomNavigation()
+        updateSwitchesAndNavigation()
     }
 
     private fun toggleSwitches(isEgoChecked: Boolean) {
@@ -105,7 +114,6 @@ class EgoFragment : Fragment() {
             Toast.makeText(
                 requireContext(), "Only 4 switches can be active at a time.", Toast.LENGTH_SHORT
             ).show()
-
         } else {
             switches.forEach { it.isEnabled = true }
         }
@@ -132,7 +140,7 @@ class EgoFragment : Fragment() {
         )
 
         switches.filter { it.first.isChecked }
-            .take(5)
+            .take(4)
             .forEach { (switch, itemId) ->
                 menu.add(Menu.NONE, itemId, Menu.NONE, getMenuTitle(itemId)).setIcon(getMenuIcon(itemId))
             }
@@ -178,7 +186,7 @@ class EgoFragment : Fragment() {
             R.id.disgustItem -> navigateToFragment(DisgustFragment())
             R.id.joyItem -> navigateToFragment(JoyFragment())
             R.id.fearItem -> navigateToFragment(FearFragment())
-            R.id.disgustItem -> navigateToFragment(SadnessFragment())
+            R.id.sadnessItem -> navigateToFragment(SadnessFragment())
             R.id.egoItem -> true
             else -> false
         }
@@ -191,6 +199,18 @@ class EgoFragment : Fragment() {
             .addToBackStack(null)
             .commit()
         return true
+    }
+
+    private fun showGif(gifResId: Int) {
+        Glide.with(this)
+            .asGif()
+            .load(gifResId)
+            .into(binding.egoGifImageView)
+        binding.egoGifImageView.visibility = View.VISIBLE
+
+        handler.postDelayed({
+            binding.egoGifImageView.visibility = View.GONE
+        }, gifDisplayDuration)
     }
 
     override fun onDestroyView() {
