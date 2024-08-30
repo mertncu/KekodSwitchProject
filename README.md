@@ -1,6 +1,9 @@
 ## Proje Açıklaması
 Bu proje, kullanıcıların bir dizi switch ile etkileşime girmesine ve bu switch'lere bağlı olarak dinamik bir BottomNavigationBar oluşturmalarına olanak tanır. "Ego" adlı bir switch, diğer switch'lerin kullanımını kısıtlar ve BottomNavigationBar'ın görünümünü etkiler. Proje, DataBinding veya ViewBinding kullanımını zorunlu kılar.
 
+## Önizleme
+[Screen_recording_20240830_224321.webm](https://github.com/user-attachments/assets/bc3739e4-5cef-41e7-84f6-d527cd167059)
+
 ## Özellikler
 ### Switch Ekranı:
 
