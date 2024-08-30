@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/angerItem"
+        android:icon="@drawable/ic_anger"
+        android:title="Anger" />
+    <item
+        android:id="@+id/disgustItem"
+        android:icon="@drawable/ic_disgust"
+        android:title="Switch 2" />
+    <item
+        android:id="@+id/joyItem"
+        android:icon="@drawable/ic_joy"
+        android:title="Switch 3" />
+    <item
+        android:id="@+id/fearItem"
+        android:icon="@drawable/ic_fear"
+        android:title="Switch 4" />
+    <item
+        android:id="@+id/sadnessItem"
+        android:icon="@drawable/ic_sad"
+        android:title="Switch 5" />
+</menu>
