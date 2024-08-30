@@ -5,10 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.kekodswitchproject.R
 import com.example.kekodswitchproject.databinding.FragmentJoyBinding
 
 
-class JoyFragment : Fragment() {
+class JoyFragment : Fragment(R.layout.fragment_joy) {
 
     private lateinit var binding: FragmentJoyBinding
     private lateinit var viewModel: JoyViewModel

@@ -17,7 +17,7 @@
             android:id="@+id/sadness_image"
             android:layout_width="180dp"
             android:layout_height="266dp"
-            android:src="@drawable/fear_image"
+            android:src="@drawable/sadness_image"
             android:contentDescription=""
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

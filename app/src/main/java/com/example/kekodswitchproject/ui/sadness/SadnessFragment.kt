@@ -11,7 +11,7 @@ import com.example.kekodswitchproject.databinding.FragmentSadnessBinding
 import com.example.kekodswitchproject.ui.fear.FearViewModel
 
 
-class SadnessFragment : Fragment() {
+class SadnessFragment : Fragment(R.layout.fragment_sadness) {
     private lateinit var binding: FragmentSadnessBinding
     private lateinit var viewModel: SadnessViewModel
 

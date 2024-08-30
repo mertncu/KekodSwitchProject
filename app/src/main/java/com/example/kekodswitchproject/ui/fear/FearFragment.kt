@@ -5,10 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.kekodswitchproject.R
 import com.example.kekodswitchproject.databinding.FragmentFearBinding
 import com.example.kekodswitchproject.ui.disgust.DisgustViewModel
 
-class FearFragment : Fragment() {
+class FearFragment : Fragment(R.layout.fragment_fear) {
     private lateinit var binding: FragmentFearBinding
     private lateinit var viewModel: FearViewModel
 

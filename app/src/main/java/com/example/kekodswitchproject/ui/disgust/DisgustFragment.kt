@@ -5,9 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.kekodswitchproject.R
 import com.example.kekodswitchproject.databinding.FragmentDisgustBinding
 
-class DisgustFragment : Fragment() {
+class DisgustFragment : Fragment(R.layout.fragment_disgust) {
 
     private lateinit var binding: FragmentDisgustBinding
     private lateinit var viewModel: DisgustViewModel

@@ -5,9 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.kekodswitchproject.R
 import com.example.kekodswitchproject.databinding.FragmentAngerBinding
 
-class AngerFragment : Fragment() {
+class AngerFragment : Fragment(R.layout.fragment_anger) {
 
     private lateinit var binding: FragmentAngerBinding
     private lateinit var viewModel: AngerViewModel

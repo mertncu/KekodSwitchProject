@@ -11,7 +11,7 @@
             android:id="@+id/switches_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:columnCount="2"
+            android:columnCount="3"
             android:rowCount="3"
             android:layout_centerInParent="true"
             android:padding="16dp"
@@ -35,9 +35,9 @@
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
-                android:text="Disgust"
                 android:track="@drawable/bg_track"
                 android:thumb="@drawable/ic_thumb"
+                android:text="Disgust"
                 android:enabled="false"/>
 
             <Switch
@@ -48,7 +48,7 @@
                 android:layout_margin="8dp"
                 android:track="@drawable/bg_track"
                 android:thumb="@drawable/ic_thumb"
-                android:text="Joy"
+                android:text="Fear"
                 android:enabled="false"/>
 
             <Switch
@@ -59,7 +59,7 @@
                 android:layout_margin="8dp"
                 android:track="@drawable/bg_track"
                 android:thumb="@drawable/ic_thumb"
-                android:text="Fear"
+                android:text="Joy"
                 android:enabled="false"/>
 
             <Switch
@@ -74,7 +74,7 @@
                 android:enabled="false"/>
 
             <Switch
-                android:id="@+id/switch_ego"
+                android:id="@+id/switchEgo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
@@ -83,31 +83,7 @@
                 android:thumb="@drawable/ic_thumb"
                 android:checked="true"
                 android:text="Ego"/>
+
         </GridLayout>
-
-        <FrameLayout
-            android:id="@+id/fragment_container"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:layout_below="@id/switches_container"
-            android:layout_above="@id/bottom_navigation"/>
-
-        <ImageView
-            android:id="@+id/egoGifImageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/anger_gif"
-            android:visibility="gone"/>
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:visibility="gone"
-            android:background="?android:attr/windowBackground"
-
-            app:menu="@menu/bottom_nav_menu"/>
     </RelativeLayout>
 </layout>
